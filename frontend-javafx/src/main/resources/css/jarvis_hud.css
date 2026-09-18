@@ -1,0 +1,159 @@
+/* J.A.R.V.I.S. Iron Man HUD Theme */
+
+.root {
+    -fx-background-color: #030b17;
+    -fx-font-family: 'Segoe UI', 'Orbitron', sans-serif;
+}
+
+/* Base HUD Container Panel */
+.hud-card {
+    -fx-background-color: rgba(7, 21, 41, 0.75);
+    -fx-background-radius: 8px;
+    -fx-border-color: #0d3859;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px;
+}
+
+.hud-card-highlight {
+    -fx-background-color: rgba(7, 25, 50, 0.85);
+    -fx-border-color: #0088cc;
+}
+
+/* Headers and Labels */
+.hud-title {
+    -fx-text-fill: #00d2ff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+}
+
+.hud-subtitle {
+    -fx-text-fill: #5c8ca6;
+    -fx-font-size: 11px;
+}
+
+.hud-value-label {
+    -fx-text-fill: #00f0ff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.hud-text-muted {
+    -fx-text-fill: #5c8ca6;
+    -fx-font-size: 12px;
+}
+
+.hud-text-bright {
+    -fx-text-fill: #e6f7ff;
+    -fx-font-size: 12px;
+}
+
+/* Telemetry Progress Bars */
+.hud-progress-bar {
+    -fx-accent: #00d2ff;
+}
+
+.hud-progress-bar .track {
+    -fx-background-color: rgba(0, 40, 70, 0.5);
+    -fx-background-radius: 4px;
+}
+
+.hud-progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #0077aa, #00f0ff);
+    -fx-background-radius: 4px;
+}
+
+/* Quick Access List Items */
+.quick-access-btn {
+    -fx-background-color: rgba(10, 30, 60, 0.4);
+    -fx-border-color: #0c3350;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-text-fill: #cceeff;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+}
+
+.quick-access-btn:hover {
+    -fx-background-color: rgba(0, 150, 255, 0.2);
+    -fx-border-color: #00d2ff;
+    -fx-text-fill: #00f0ff;
+    -fx-effect: dropshadow(gaussian, #00d2ff, 8, 0.3, 0, 0);
+}
+
+/* Bottom Command Bar */
+.input-console-bar {
+    -fx-background-color: rgba(6, 20, 38, 0.9);
+    -fx-border-color: #0099cc;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 24px;
+    -fx-background-radius: 24px;
+    -fx-padding: 4px 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 210, 255, 0.25), 14, 0.2, 0, 0);
+}
+
+.hud-text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e6f7ff;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #446e88;
+}
+
+.hud-text-field:focused {
+    -fx-background-color: transparent;
+}
+
+/* Action / Send / Mic Buttons */
+.hud-icon-btn {
+    -fx-background-color: rgba(0, 180, 255, 0.15);
+    -fx-background-radius: 50%;
+    -fx-border-color: #00d2ff;
+    -fx-border-radius: 50%;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #00f0ff;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.hud-icon-btn:hover {
+    -fx-background-color: rgba(0, 220, 255, 0.35);
+    -fx-effect: dropshadow(gaussian, #00f0ff, 12, 0.5, 0, 0);
+}
+
+/* Emergency Kill-Switch Button */
+.hud-kill-switch {
+    -fx-background-color: rgba(255, 50, 70, 0.2);
+    -fx-border-color: #ff3344;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-text-fill: #ff6677;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 10px;
+    -fx-cursor: hand;
+}
+
+.hud-kill-switch:hover {
+    -fx-background-color: rgba(255, 50, 70, 0.45);
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, #ff3344, 12, 0.5, 0, 0);
+}
+
+/* Window Control Buttons */
+.win-control-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5c8ca6;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.win-control-btn:hover {
+    -fx-text-fill: #00f0ff;
+}
+
+.win-close-btn:hover {
+    -fx-text-fill: #ff4455;
+}

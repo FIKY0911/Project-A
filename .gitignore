@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+backend-python/.venv/
+backend-python/audio_cache/
+backend-python/data/snapshots/
+backend-python/.pytest_cache/
+
+# Java & Maven
+frontend-javafx/target/
+*.class
+.mvn/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

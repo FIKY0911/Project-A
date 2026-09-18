@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jarvis.hud.controller.SettingsController"
+      spacing="16.0" style="-fx-background-color: #030b17; -fx-border-color: #00d2ff; -fx-border-width: 1.5px; -fx-border-radius: 8px; -fx-background-radius: 8px;"
+      prefWidth="450.0" prefHeight="420.0">
+    <padding>
+        <Insets top="20.0" right="24.0" bottom="20.0" left="24.0"/>
+    </padding>
+
+    <Label text="J.A.R.V.I.S. CONFIGURATION" styleClass="hud-title" style="-fx-font-size: 16px;"/>
+    <Label text="Configure Multi-Provider LLM &amp; Autonomous Gateway" styleClass="hud-subtitle"/>
+
+    <Separator style="-fx-background-color: #0d3859;"/>
+
+    <GridPane vgap="12.0" hgap="12.0">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120.0" prefWidth="130.0"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <!-- Provider -->
+        <Label text="LLM Provider:" styleClass="hud-text-bright" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="providerComboBox" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                  style="-fx-background-color: #07192f; -fx-border-color: #0088cc; -fx-text-fill: #e6f7ff;"/>
+
+        <!-- Model Name -->
+        <Label text="Model Name:" styleClass="hud-text-bright" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="modelField" promptText="e.g. gpt-4o, gemini-1.5-flash, llama3"
+                   style="-fx-background-color: #07192f; -fx-border-color: #0088cc; -fx-text-fill: #e6f7ff;"
+                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- API Key -->
+        <Label text="API Key:" styleClass="hud-text-bright" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="apiKeyField" promptText="Enter provider API key"
+                       style="-fx-background-color: #07192f; -fx-border-color: #0088cc; -fx-text-fill: #e6f7ff;"
+                       GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Base URL -->
+        <Label text="Base URL (Optional):" styleClass="hud-text-bright" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="baseUrlField" promptText="e.g. http://localhost:11434"
+                   style="-fx-background-color: #07192f; -fx-border-color: #0088cc; -fx-text-fill: #e6f7ff;"
+                   GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label fx:id="statusLabel" text="" style="-fx-text-fill: #00f0ff; -fx-font-size: 11px;"/>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <HBox spacing="12.0" alignment="CENTER_RIGHT">
+        <Button text="Cancel" onAction="#handleCancel"
+                style="-fx-background-color: transparent; -fx-border-color: #5c8ca6; -fx-text-fill: #5c8ca6; -fx-cursor: hand;"/>
+        <Button text="Save &amp; Connect" onAction="#handleSave"
+                style="-fx-background-color: rgba(0, 210, 255, 0.2); -fx-border-color: #00d2ff; -fx-text-fill: #00f0ff; -fx-cursor: hand; -fx-font-weight: bold;"/>
+    </HBox>
+</VBox>
