@@ -11,18 +11,19 @@
 4. Microphone & Speakers (Ensure microphone permission is ON in Windows Settings)
 
 ------------------------------------------------------------------------
-[EN] QUICK START IN 3 STEPS:
+[EN] QUICK START IN 3 STEPS (ALL .EXE - NO SCRIPTS REQUIRED):
 ------------------------------------------------------------------------
 STEP 1: INSTALL
-  Double-click "install_windows.bat"
+  Double-click "install.exe"
   Automatically sets up Python virtual environment and installs all dependencies.
+  (Note: "jarvis.exe" will also automatically run this setup if not yet installed).
 
 STEP 2: CONFIGURE (OPTIONAL)
   Double-click "jarvis-config.exe" (or configure via in-app Settings gear in the HUD)
   Set your LLM Provider, API Key, Base URL (e.g. http://localhost:20128/v1), Model Name.
 
 STEP 3: LAUNCH
-  Double-click "jarvis.exe" (or "start_jarvis.bat")
+  Double-click "jarvis.exe"
   - Microphone is always listening.
   - Call "Jarvis" -> Jarvis responds: "Yes Sir, ada yang bisa saya bantu?"
   - Issue any command:
@@ -33,18 +34,19 @@ STEP 3: LAUNCH
       * "Jarvis, buat folder projects_test" (Creates folder)
 
 ------------------------------------------------------------------------
-[ID] PANDUAN CEPAT DALAM 3 LANGKAH:
+[ID] PANDUAN CEPAT DALAM 3 LANGKAH (MURNI .EXE - TANPA BATCH/SCRIPT):
 ------------------------------------------------------------------------
 LANGKAH 1: INSTALASI
-  Klik ganda "install_windows.bat"
+  Klik ganda "install.exe"
   Secara otomatis membuat virtual environment Python dan menginstal semua paket.
+  (Catatan: "jarvis.exe" juga akan otomatis menjalankan setup jika belum terinstal).
 
 LANGKAH 2: PENGATURAN MODEL AI (OPSIONAL)
   Klik ganda "jarvis-config.exe" (atau gunakan ikon roda gigi ⚙️ di HUD)
   Atur Provider AI, API Key, Base URL lokal/remote, dan Model Name.
 
 LANGKAH 3: JALANKAN
-  Klik ganda "jarvis.exe" (atau "start_jarvis.bat")
+  Klik ganda "jarvis.exe"
   - Mikrofon selalu aktif mendengarkan.
   - Panggil "Jarvis" -> Dijawab: "Yes Sir, ada yang bisa saya bantu?"
   - Berikan perintah apa pun:
@@ -56,10 +58,9 @@ LANGKAH 3: JALANKAN
 
 ------------------------------------------------------------------------
 BERKAS DALAM PAKET / PACKAGE FILES:
-  jarvis.exe          -> Peluncur native Windows (Native launcher)
-  jarvis-config.exe   -> Utilitas konfigurasi AI GUI Windows
-  install_windows.bat -> Skrip instalasi otomatis
-  start_jarvis.bat    -> Skrip batch peluncur cadangan
+  jarvis.exe          -> Peluncur utama native Windows (Main native launcher)
+  install.exe         -> Pemasang dependensi native Windows (Native installer)
+  jarvis-config.exe   -> Utilitas konfigurasi AI GUI Windows (Native settings)
   backend/            -> Mesin AI Python, database SQLite WAL, audio cache
   frontend/           -> Antarmuka Iron Man Sci-Fi HUD (jarvis-hud.jar)
 

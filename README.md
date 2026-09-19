@@ -105,18 +105,17 @@ jarvis
 - **Tautan Unduh ZIP**: 📦 **[Unduh jarvis-windows-x64.zip](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip)**
 - Setelah file selesai diunduh, klik kanan pada file **`jarvis-windows-x64.zip`**, pilih **Extract All...** (Ekstrak Semua) ke folder pilihan Anda (contoh: `C:\JARVIS` atau `D:\JARVIS`).
 
-#### 2. Instalasi Lingkungan & Dependensi (Hanya Sekali di Awal):
-Buka folder hasil ekstraksi (`jarvis-windows-x64`), lalu klik ganda file:
+#### 2. Instalasi Dependensi via Native Executable (Hanya Sekali di Awal):
+Buka folder hasil ekstraksi (`jarvis-windows-x64`), lalu klik ganda file installer:
 ```cmd
-install_windows.bat
+install.exe
 ```
-*(Skrip ini otomatis membuat virtual environment Python dan menginstal dependensi yang dibutuhkan).*
+*(Program installer native ini akan otomatis menyiapkan virtual environment Python dan mengunduh seluruh dependensi yang diperlukan. Anda juga bisa langsung menjalankan `jarvis.exe`, program akan otomatis mendeteksi dan menyiapkan dependensi jika belum terinstal).*
 
-#### 3. Jalankan Aplikasi (.exe):
+#### 3. Jalankan Aplikasi Langsung (.exe):
 Di dalam folder hasil ekstraksi:
-- Klik ganda **`jarvis.exe`** untuk meluncurkan JARVIS secara langsung (backend Python dan HUD JavaFX akan aktif otomatis).
-- Jalankan **`jarvis-config.exe`** jika ingin mengatur API Key dan model LLM melalui antarmuka grafis sebelum memulai.
-- *(Alternatif)*: Anda juga dapat menjalankan **`start_jarvis.bat`** jika ingin memantau log terminal Command Prompt secara langsung.
+- **Klik ganda `jarvis.exe`** untuk meluncurkan JARVIS secara langsung (backend Python dan HUD JavaFX akan aktif otomatis di latar belakang).
+- **Klik ganda `jarvis-config.exe`** jika ingin mengatur API Key dan model LLM melalui dialog grafis Windows sebelum atau sesudah memulai.
 
 ---
 

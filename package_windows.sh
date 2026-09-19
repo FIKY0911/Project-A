@@ -18,6 +18,7 @@ echo "[*] Building JavaFX multi-OS fat jar..."
 echo "[*] Compiling native Windows PE executables (x86_64)..."
 mkdir -p "$PROJECT_ROOT/windows_dist"
 x86_64-w64-mingw32-gcc -O2 -municode "$PROJECT_ROOT/windows_dist/src/launcher.c" -o "$PROJECT_ROOT/windows_dist/jarvis.exe"
+x86_64-w64-mingw32-gcc -O2 -municode "$PROJECT_ROOT/windows_dist/src/installer.c" -o "$PROJECT_ROOT/windows_dist/install.exe"
 x86_64-w64-mingw32-gcc -O2 -municode "$PROJECT_ROOT/windows_dist/src/config_tool.c" -o "$PROJECT_ROOT/windows_dist/jarvis-config.exe"
 
 # 3. Prepare Staging Directory
@@ -27,11 +28,10 @@ mkdir -p "$WIN_DIR/frontend"
 mkdir -p "$WIN_DIR/backend/data"
 mkdir -p "$WIN_DIR/backend/audio_cache"
 
-# Copy Executables and batch files
+# Copy Executables (Strictly .exe binaries - no .bat scripts)
 cp "$PROJECT_ROOT/windows_dist/jarvis.exe" "$WIN_DIR/"
+cp "$PROJECT_ROOT/windows_dist/install.exe" "$WIN_DIR/"
 cp "$PROJECT_ROOT/windows_dist/jarvis-config.exe" "$WIN_DIR/"
-cp "$PROJECT_ROOT/windows_dist/install_windows.bat" "$WIN_DIR/"
-cp "$PROJECT_ROOT/windows_dist/start_jarvis.bat" "$WIN_DIR/"
 cp "$PROJECT_ROOT/windows_dist/README_WINDOWS.txt" "$WIN_DIR/"
 
 # Copy Frontend JAR

@@ -1,5 +1,9 @@
+#ifndef UNICODE
 #define UNICODE
+#endif
+#ifndef _UNICODE
 #define _UNICODE
+#endif
 #include <windows.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -45,10 +49,22 @@ int wmain(int argc, wchar_t *argv[]) {
         }
     }
 
-    // 2. Locate Python executable
+    // 2. Locate Python executable / Check first-time setup
     wchar_t pythonCmd[MAX_PATH] = L"python";
     wchar_t venvPython[MAX_PATH];
     swprintf(venvPython, MAX_PATH, L"%ls\\backend\\.venv\\Scripts\\python.exe", exePath);
+
+    if (!FileExistsW(venvPython)) {
+        wchar_t installerExe[MAX_PATH];
+        swprintf(installerExe, MAX_PATH, L"%ls\\install.exe", exePath);
+        if (FileExistsW(installerExe)) {
+            wprintf(L"[*] First-time launch detected! Running automatic setup...\n\n");
+            wchar_t installerCmd[MAX_PATH * 2];
+            swprintf(installerCmd, MAX_PATH * 2, L"\"%ls\" --no-pause", installerExe);
+            _wsystem(installerCmd);
+        }
+    }
+
     if (FileExistsW(venvPython)) {
         swprintf(pythonCmd, MAX_PATH, L"\"%ls\"", venvPython);
     } else {
@@ -108,7 +124,7 @@ int wmain(int argc, wchar_t *argv[]) {
 
     if (!bBackendSuccess) {
         wprintf(L"[!] Failed to launch Python backend! Error code: %lu\n", GetLastError());
-        wprintf(L"[*] Try running 'install_windows.bat' first to install required dependencies.\n");
+        wprintf(L"[*] Try running 'install.exe' first to install required dependencies.\n");
         wprintf(L"Press any key to exit...");
         getchar();
         return 1;

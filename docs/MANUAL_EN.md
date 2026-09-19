@@ -164,16 +164,15 @@ For users who want to run J.A.R.V.I.S. immediately without compiling from source
    Download [jarvis-windows-x64.zip](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip) to your computer.
 2. **Extract Archive**:
    Right-click `jarvis-windows-x64.zip`, select **Extract All...**, and specify your desired destination directory (e.g., `C:\JARVIS` or `D:\JARVIS`).
-3. **Install Dependencies (One-time only)**:
-   Open the extracted `jarvis-windows-x64` directory and double-click:
+3. **Install Dependencies via `install.exe` (One-time only)**:
+   Open the extracted `jarvis-windows-x64` directory and double-click the native installer:
    ```cmd
-   install_windows.bat
+   install.exe
    ```
-   *This script automatically configures an isolated Python virtual environment and installs all required dependencies.*
+   *This native installer executable automatically configures an isolated Python virtual environment and installs all required dependencies. (Note: Running `jarvis.exe` directly will also automatically detect and trigger environment configuration if not yet initialized).*
 4. **Launch Application (.exe)**:
    - Double-click **`jarvis.exe`** to launch J.A.R.V.I.S. (automatically starts the Python backend daemon in background and presents the Sci-Fi Iron Man HUD).
    - Run **`jarvis-config.exe`** to configure LLM Provider, API Keys, and Base URLs via a native GUI dialog.
-   - Alternatively, you can run **`start_jarvis.bat`** if you wish to monitor backend terminal outputs.
 
 ### Manual Windows Installation
 If cloning from source:
