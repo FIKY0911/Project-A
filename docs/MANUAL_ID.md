@@ -154,18 +154,27 @@ mvn clean javafx:run
 - **Python**: Python 3.12+ (Pastikan opsi *"Add Python to PATH"* dicentang saat instalasi).
 - **Visual C++ Redistributable**: Diperlukan untuk modul OpenCV dan PyAudio di Windows.
 
-### Instalasi Cepat via Paket ZIP (`jarvis-windows-x64.zip`)
-Arsip siap pakai telah disediakan di root repository: `jarvis-windows-x64.zip`.
+### Instalasi Cepat via Paket ZIP Siap Pakai (`jarvis-windows-x64.zip`)
 
-1. Ekstrak file `jarvis-windows-x64.zip` ke lokasi folder pilihan Anda (contoh: `C:\JARVIS` atau `D:\JARVIS`).
-2. Masuk ke folder hasil ekstraksi.
-3. Jalankan `setup_env.bat` (atau `install.bat`) satu kali untuk membuat virtual environment dan menginstal dependensi secara otomatis.
+Bagi pengguna yang ingin langsung menggunakan J.A.R.V.I.S. tanpa perlu mengompilasi kode sumber:
 
-### Eksekusi via Native Windows Launcher (`JARVIS.exe`)
-Di dalam folder distribusi Windows, telah disertakan program launcher native biner C yang dikompilasi khusus untuk Windows (x86_64):
-- **`JARVIS.exe`**: Peluncur utama bersi-si grafis. Memeriksa ketersediaan Java dan Python, menghidupkan backend asinkron di latar belakang secara otomatis, lalu membuka Sci-Fi HUD.
-- **`JARVIS_Config.exe`**: Utilitas konfigurasi berbasis dialog Windows untuk menyetel endpoint API LLM, API Key, dan nama model tanpa membuka code editor.
-- **`run_jarvis.bat`**: Alternatif batch script untuk peluncuran langsung.
+🔗 **Link Download Paket ZIP**: **[Unduh jarvis-windows-x64.zip (Direct Download)](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip)**
+
+#### Langkah-Langkah Pemasangan & Menjalankan:
+1. **Unduh Arsip ZIP**:
+   Unduh file [jarvis-windows-x64.zip](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip) ke komputer Anda.
+2. **Ekstrak File ZIP**:
+   Klik kanan file `jarvis-windows-x64.zip`, pilih **Extract All...** (Ekstrak Semua), lalu arahkan ke lokasi folder yang diinginkan (misalnya `C:\JARVIS` atau `D:\JARVIS`).
+3. **Instal Dependensi (Hanya Sekali di Awal)**:
+   Masuk ke folder hasil ekstraksi `jarvis-windows-x64`, lalu klik ganda file:
+   ```cmd
+   install_windows.bat
+   ```
+   *Skrip ini akan secara otomatis menyiapkan virtual environment Python dan mengunduh seluruh dependensi yang diperlukan.*
+4. **Jalankan Aplikasi (.exe)**:
+   - Klik ganda **`jarvis.exe`** untuk langsung menjalankan sistem. Launcher ini akan mengaktifkan backend Python di latar belakang secara otomatis dan membuka antarmuka HUD Iron Man.
+   - Gunakan **`jarvis-config.exe`** jika Anda ingin menyesuaikan endpoint API LLM, API Key, dan nama model AI via GUI.
+   - Anda juga dapat menggunakan **`start_jarvis.bat`** jika ingin menjalankan via terminal batch.
 
 ### Instalasi Manual di Windows
 Jika Anda melakukan clone langsung dari repositori git:

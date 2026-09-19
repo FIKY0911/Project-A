@@ -6,10 +6,12 @@
 [![Java: OpenJDK 21 LTS](https://img.shields.io/badge/Java-21%20LTS-f89820.svg)](#)
 [![Tests: 13/13 Passed](https://img.shields.io/badge/Pytest-13%2F13%20Passed-brightgreen.svg)](#)
 [![Docs: ID & EN](https://img.shields.io/badge/Documentation-Bilingual%20(ID%20%2F%20EN)-blueviolet.svg)](#)
+[![Download: Windows ZIP](https://img.shields.io/badge/Download-Windows%20x64%20ZIP-success?logo=windows&logoColor=white)](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip)
 
 ---
 
-### 🌐 Quick Documentation Links / Tautan Dokumentasi Lengkap
+### 🌐 Quick Documentation Links & Downloads
+- 📥 **[Download J.A.R.V.I.S. Windows x64 ZIP (Ready to Run)](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip)**
 - 🇮🇩 **[Panduan Lengkap Bahasa Indonesia (docs/MANUAL_ID.md)](docs/MANUAL_ID.md)**
 - 🇬🇧 **[Full English Technical Manual (docs/MANUAL_EN.md)](docs/MANUAL_EN.md)**
 
@@ -99,18 +101,22 @@ jarvis
 
 ### 🪟 Windows (x64)
 
-#### 1. Ekstrak Paket Siap Pakai:
-Ekstrak arsip **`jarvis-windows-x64.zip`** ke folder pilihan Anda (misal `C:\JARVIS`).
+#### 1. Download & Ekstrak Paket Siap Pakai:
+- **Tautan Unduh ZIP**: 📦 **[Unduh jarvis-windows-x64.zip](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip)**
+- Setelah file selesai diunduh, klik kanan pada file **`jarvis-windows-x64.zip`**, pilih **Extract All...** (Ekstrak Semua) ke folder pilihan Anda (contoh: `C:\JARVIS` atau `D:\JARVIS`).
 
-#### 2. Konfigurasi Lingkungan (Sekali Saja):
-Klik ganda pada file:
+#### 2. Instalasi Lingkungan & Dependensi (Hanya Sekali di Awal):
+Buka folder hasil ekstraksi (`jarvis-windows-x64`), lalu klik ganda file:
 ```cmd
-setup_env.bat
+install_windows.bat
 ```
+*(Skrip ini otomatis membuat virtual environment Python dan menginstal dependensi yang dibutuhkan).*
 
-#### 3. Jalankan Aplikasi:
-- Klik ganda **`JARVIS.exe`** untuk meluncurkan sistem.
-- Gunakan **`JARVIS_Config.exe`** jika ingin mengatur API Key dan endpoint LLM dengan cepat.
+#### 3. Jalankan Aplikasi (.exe):
+Di dalam folder hasil ekstraksi:
+- Klik ganda **`jarvis.exe`** untuk meluncurkan JARVIS secara langsung (backend Python dan HUD JavaFX akan aktif otomatis).
+- Jalankan **`jarvis-config.exe`** jika ingin mengatur API Key dan model LLM melalui antarmuka grafis sebelum memulai.
+- *(Alternatif)*: Anda juga dapat menjalankan **`start_jarvis.bat`** jika ingin memantau log terminal Command Prompt secara langsung.
 
 ---
 

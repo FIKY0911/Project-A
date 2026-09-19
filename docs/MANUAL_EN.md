@@ -153,18 +153,27 @@ mvn clean javafx:run
 - **Python**: Python 3.12+ (Ensure *"Add Python to PATH"* is checked during installation).
 - **Visual C++ Redistributable**: Required for OpenCV and native audio libraries.
 
-### Fast Setup via ZIP Distribution (`jarvis-windows-x64.zip`)
-A pre-packaged archive is provided at the repository root: `jarvis-windows-x64.zip`.
+### Fast Setup via Pre-Packaged ZIP (`jarvis-windows-x64.zip`)
 
-1. Extract `jarvis-windows-x64.zip` to a target directory (e.g., `C:\JARVIS` or `D:\JARVIS`).
-2. Open the extracted directory.
-3. Run `setup_env.bat` once to configure the Python virtual environment and install all dependencies automatically.
+For users who want to run J.A.R.V.I.S. immediately without compiling from source:
 
-### Native Windows PE Launchers (`JARVIS.exe` & `JARVIS_Config.exe`)
-The Windows distribution includes compiled native 64-bit executables:
-- **`JARVIS.exe`**: High-performance graphical launcher. Validates Java and Python runtimes, initializes the asynchronous backend daemon silently, and displays the Iron Man HUD.
-- **`JARVIS_Config.exe`**: Native configuration utility for setting the LLM Provider, Base URL, Model Name, and API Key without opening text editors.
-- **`run_jarvis.bat`**: Alternative batch script for direct terminal debugging.
+🔗 **Direct Download Link**: **[Download jarvis-windows-x64.zip (Direct Download)](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip)**
+
+#### Setup & Execution Steps:
+1. **Download ZIP Archive**:
+   Download [jarvis-windows-x64.zip](https://github.com/FIKY0911/Project-A/raw/main/jarvis-windows-x64.zip) to your computer.
+2. **Extract Archive**:
+   Right-click `jarvis-windows-x64.zip`, select **Extract All...**, and specify your desired destination directory (e.g., `C:\JARVIS` or `D:\JARVIS`).
+3. **Install Dependencies (One-time only)**:
+   Open the extracted `jarvis-windows-x64` directory and double-click:
+   ```cmd
+   install_windows.bat
+   ```
+   *This script automatically configures an isolated Python virtual environment and installs all required dependencies.*
+4. **Launch Application (.exe)**:
+   - Double-click **`jarvis.exe`** to launch J.A.R.V.I.S. (automatically starts the Python backend daemon in background and presents the Sci-Fi Iron Man HUD).
+   - Run **`jarvis-config.exe`** to configure LLM Provider, API Keys, and Base URLs via a native GUI dialog.
+   - Alternatively, you can run **`start_jarvis.bat`** if you wish to monitor backend terminal outputs.
 
 ### Manual Windows Installation
 If cloning from source:
